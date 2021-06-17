@@ -8,8 +8,8 @@ function addMovieListToHTML(movieData) {
                 <div class="col-6 p-1">Movie: ${currentMovie.title}</div>
                 <div class="col-6 p-1">Rating: ${currentMovie.rating}</div>
                 <div class="col-12 p-1">Plot: ${currentMovie.plot}</div>
-                <a href="#" class='col-3'>Edit</a>
-                <a href="#" class='col-3'>Delete</a>
+                <a href="#" class='col-3 edit-button'>Edit</a>
+                <a href="#"  class='col-3 delete-button' onclick="deleteButtonIsClicked" >Delete</a>
             </div>
             `
         )
@@ -20,4 +20,21 @@ function toggleAddMovieForm () {
     let addMovieSection = $('#add-movie-section')
     addMovieSection.toggleClass('toggle-add-movie')
 }
+
+let addMovieButton = $("#add-movie-button");
+addMovieButton.click(addNewMovieInfo)
+function createClickEvents() {
+    let deleteButtons = $(".delete-button");
+    deleteButtons.on("click", deleteButtonIsClicked);
+}
+
+
+function deleteButtonIsClicked(e) {
+    console.log("delete button was clicked");
+    let test = $(this);
+    console.log(test);
+}
+
+
+
 

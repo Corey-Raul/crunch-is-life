@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <header id="">
+                [Movie Website Title Here]
+            </header>
+            <section id="movie-list">
+                [List of Movies Here] maybe Options Selctor
+                [Edit / Delete]
+                [a container for edit a single movie]
+            </section>
+            <!--   ***SECTION TO ADD A MOVIE *** -->
+            <section>
+                <form action="#" method="GET" id="add-movie-form">
+                    <h2>Add a Movie</h2>
+
+                    <input type="text" id="add-movie-name" placeholder="Enter Movie Title">
+
+                    <br>
+                    <br>
+                    <label for="add-movie-rating">Select Movie Rating</label>
+                    <select name="add-movie-rating" id="add-movie-rating">
+                        <option value="">---</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Star</option>
+                        <option value="3">3 Star</option>
+                        <option value="4">4 Star</option>
+                        <option value="5">5 Star</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="submit" id="add-movie-submit">Submit Movie</button>
+                </form>
+            </section>
+        </div>
+        <script src="jquery/jquery-2.2.4.js"></script>
+        <script src="js/fetch-requests.js"></script>
+        <script src="js/dom-manipulation.js"></script>
+    </body>
+</html>

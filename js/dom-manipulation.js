@@ -7,15 +7,18 @@ function addMovieListToHTML(movieData) {
 		let plot = currentMovie.plot;
 		let rating = currentMovie.rating
 		let genre = currentMovie.genre
+		let poster = currentMovie.poster
 		movieList.append(
-			`<div id="container-id-${id}" data-id="${id}" class="row border p-2">
-                <div id="title-id-${id}" class="col-6 p-1"><strong>Tittle: </strong>${title}</div>
-                <div id="rating-id-${id}" class="col-6 p-1"><strong>Rating: </strong>${rating}</div>
-                <div id="plot-id-${id}" class="col-12 p-1"><strong>Plot:</strong><br> ${plot}</div>
-                <div id="genre-id-${id}" class="col-12 p-1"><strong>Genre:</strong><br> ${genre}</div>
+			//THERE ARE THE INDIVIDUAL MOVIE CARDS
+			`<div id="container-id-${id}" data-id="${id}" class="row border rounded movie-container p-3 my-2">
+				<img src="${poster}" alt="img-id-${id}" class="col-7 mx-auto">
+                <div id="title-id-${id}" class="col-8 p-1"><strong>Tittle: </strong>${title}</div>
+                <div id="rating-id-${id}" class="col-4 p-1"><strong>Rating: </strong>${rating}</div>
+                <div id="plot-id-${id}" class="col-12 p-1 plot-background"><strong>Plot:</strong><br> ${plot}</div>
+                <div id="genre-id-${id}" class="col-12 p-1 genre-background"><strong>Genre:</strong><br> ${genre}</div>
                 <div id="edit-section-id-${id}" class="col-12 toggle-feature"></div>
-                <button class="col-5 edit-button btn btn-primary m-1 mx-auto" data-id="${id}">Edit</button>
-                <button  class="col-5 delete-button btn btn-primary m-1 mx-auto" data-id="${id}" >Delete</button>
+                <button class="col-5 edit-button btn btn-light m-1 mx-auto" data-id="${id}">Edit</button>
+                <button  class="col-5 delete-button btn btn-light m-1 mx-auto" data-id="${id}" >Delete</button>
             </div>`
 		)
 	})
@@ -57,7 +60,7 @@ function createEditingSection(parentID) {
 	// parentID = $(this).parent().attr('data-id');
 	let editSection = $(`#edit-section-id-${parentID}`)
 	editSection.html('').toggleClass('toggle-feature')
-	let currentMovie = movieData[parentID - 1]
+	let currentMovie = realMovieData[parentID - 1]
 	editSection.append(`
             <form class="row">
             	<div class="col-6">
@@ -116,17 +119,23 @@ function createEditingSection(parentID) {
 	})
 }
 
+// if (currentMovie.name.toLowerCase().includes(inputSearch.toLowerCase()) ) {
+//	newMoviesArray.push(currentMovie)
+// }
+function sortTest (movieData) {
+	let jumbotronSection = $('')
+}
 
 // {
-// 	"title": "tenet",
-// 	"rating": "5",
-// 	"poster": "https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_SX300.jpg",
-// 	"year": "2020",
-// 	"genre": "Action, Sci-Fi",
-// 	"director": "Christopher Nolan",
-// 	"plot": "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
-// 	"actors": "Elizabeth Debicki, Robert Pattinson, John David Washington, Aaron Taylor-Johnson",
-// 	"id": 2
+// 	"title":
+// 	"rating":
+// 	"poster":
+// 	"year":
+// 	"genre":
+// 	"director":
+// 	"plot":
+// 	"actors":
+// 	"id":
 // }
 
 

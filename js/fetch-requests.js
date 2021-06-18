@@ -3,7 +3,7 @@ function documentLoad() {
 }
 
 let glitchURL = "https://spangle-second-act.glitch.me/movies";
-let movieData;
+let realMovieData;
 
 //Will load page with multiple functions functions so that all can be done with one setTimeout above
 function loadPage() {
@@ -16,11 +16,11 @@ function fetchMovieData() {
 	fetch(glitchURL)
 		.then(response => response.json())
 		.then(data => {
-			movieData = data;
+			realMovieData = data;
 			console.log('Fetching Movie Data')
 			console.log(data)
 			addMovieListToHTML(data);
-			return movieData
+			return realMovieData
 		})
 		// !!!!!IMPORTANT!!!!!!!!
 		// Get back to this with instructor; error does not log in console

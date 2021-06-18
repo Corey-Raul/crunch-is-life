@@ -1,3 +1,36 @@
 .toggle-feature {
     display: none;
 }
+
+body {
+    background: #1B3FA4;
+    background: -moz-linear-gradient(left, #1B3FA4 0%, #2388CB 50%, #4E1775 100%);
+    background: -webkit-linear-gradient(left, #1B3FA4 0%, #2388CB 50%, #4E1775 100%);
+    background: linear-gradient(to right, #1B3FA4 0%, #2388CB 50%, #4E1775 100%);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    color:white;
+}
+
+.jumbotron {
+    background-color: #grey;
+}
+
+div.movie-container {
+    background-color: #D48166 !important;
+    color: white;
+}
+
+.plot-background {
+    background-color: grey;
+}
+
+.genre-background {
+    background-color: grey;
+}
+
+.edit-button, .delete-button {
+    background-color: red;
+    border-color: black;
+}
+

@@ -16,31 +16,36 @@
             <header class="jumbotron jumbotron-fluid p-4">
                 <h1 class="text-center">MOVIE THINGA M'BOBER</h1>
                 <br>
-            <section id="add-movie-section" class="toggle-feature">
-                <div class="container">
-                    <form action="#" method="GET" id="add-movie-form row">
-                        <h2 class="col-12">Add a Movie</h2>
-                        <input class="col-12" type="text" id="add-movie-title" placeholder="Enter Movie Title">
-                        <!--<lable> is specific to that tag-->
-                        <label class="col-12 pl-0 mt-2 mb-0" for="add-movie-rating">Select Movie Rating</label>
-                        <!--<select> is the element that gives you a drop down menu-->
-                        <select class="col-12" name="add-movie-rating" id="add-movie-rating">
-                            <!--<option> element displays the items in the drop down menu-->
-                            <option value="0">---</option>
-                            <option value="1">1 Star</option>
-                            <option value="2">2 Star</option>
-                            <option value="3">3 Star</option>
-                            <option value="4">4 Star</option>
-                            <option value="5">5 Star</option>
-                        </select>
-                        <button type="submit" id="add-movie-button" class="mx-auto col-12 m-1 btn btn-primary">Submit Movie</button>
-                    </form>
-                </div>
-            </section>
+                <section id="add-movie-section" class="toggle-feature">
+                    <div class="container">
+                        <form action="#" method="GET" id="add-movie-form row">
+                            <h2 class="col-12">Add a Movie</h2>
+                            <input class="col-12" type="text" id="add-movie-title" placeholder="Enter Movie Title">
+                            <!--<lable> is specific to that tag-->
+                            <label class="col-12 pl-0 mt-2 mb-0" for="add-movie-rating">Select Movie Rating</label>
+                            <!--<select> is the element that gives you a drop down menu-->
+                            <select class="col-12" name="add-movie-rating" id="add-movie-rating">
+                                <!--<option> element displays the items in the drop down menu-->
+                                <option value="0">---</option>
+                                <option value="1">1 Star</option>
+                                <option value="2">2 Star</option>
+                                <option value="3">3 Star</option>
+                                <option value="4">4 Star</option>
+                                <option value="5">5 Star</option>
+                            </select>
+                            <button type="submit" id="add-movie-button" class="mx-auto col-12 m-1 btn btn-primary">
+                                Submit Movie
+                            </button>
+                        </form>
+                    </div>
+                </section>
             </header>
             <section id="movie-list">
-                <h2>Loading...</h2>
-                <div id="movie-list-container" class="container">
+                <div class="row justify-content-center mx-auto">
+                    <h2 class="col-2 d-inline">Loading</h2>
+                    <div class="col-2 ml-2 align-self-center">
+                        <div class="spinner-border" role="status"></div>
+                    </div>
                 </div>
             </section>
             <!--   ***SECTION TO ADD A MOVIE *** -->

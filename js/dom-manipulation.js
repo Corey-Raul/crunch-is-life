@@ -6,14 +6,16 @@ function addMovieListToHTML(movieData) {
 		let title = currentMovie.title.toUpperCase();
 		let plot = currentMovie.plot;
 		let rating = currentMovie.rating
+		let genre = currentMovie.genre
 		movieList.append(
 			`<div id="container-id-${id}" data-id="${id}" class="row border p-2">
                 <div id="title-id-${id}" class="col-6 p-1"><strong>Tittle: </strong>${title}</div>
                 <div id="rating-id-${id}" class="col-6 p-1"><strong>Rating: </strong>${rating}</div>
                 <div id="plot-id-${id}" class="col-12 p-1"><strong>Plot:</strong><br> ${plot}</div>
+                <div id="genre-id-${id}" class="col-12 p-1"><strong>Genre:</strong><br> ${genre}</div>
                 <div id="edit-section-id-${id}" class="col-12 toggle-feature"></div>
-                <button class="col-3 edit-button btn btn-primary m-1" data-id="${id}">Edit</button>
-                <button  class="col-3 delete-button btn btn-primary m-1" data-id="${id}" >Delete</button>
+                <button class="col-5 edit-button btn btn-primary m-1 mx-auto" data-id="${id}">Edit</button>
+                <button  class="col-5 delete-button btn btn-primary m-1 mx-auto" data-id="${id}" >Delete</button>
             </div>`
 		)
 	})

@@ -20,11 +20,8 @@ function addMovieListToHTML(movieData) {
 
 	addDeleteBtnEvents()
 	//Add EditButtonEvent)
-	let editButtons = $('.edit-button')
-	editButtons.on('click', function () {
-		let id = $(this).parent().attr('data-id');
-		createEditingSection(id)
-	});
+	addEditButtonEvents()
+
 }
 
 //Un-hides Add a Movie Section after Load
@@ -47,7 +44,7 @@ function addDeleteBtnEvents() {
 	});
 }
 
-function addEditButtonEvents(movieData) {
+function addEditButtonEvents() {
 	$('.edit-button').on('click', function () {
 		let id = $(this).parent().attr('data-id');
 		createEditingSection(id)

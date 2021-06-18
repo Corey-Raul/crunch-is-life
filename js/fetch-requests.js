@@ -1,5 +1,5 @@
 function documentLoad() {
-	setTimeout(loadPage, 700)
+	setTimeout(loadPage, 1000)
 }
 
 let glitchURL = "https://spangle-second-act.glitch.me/movies";

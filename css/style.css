@@ -17,8 +17,8 @@ body {
 }
 
 div.movie-container {
-    background-color: #D48166 !important;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .plot-background {

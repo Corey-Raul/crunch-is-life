@@ -21,7 +21,7 @@ function addMovieListToHTML(movieData) {
 	})
 
 	addDeleteBtnEvents()
-	//Add EditButtonEvent)
+	//Add EditButtonEvent
 	addEditButtonEvents()
 
 }

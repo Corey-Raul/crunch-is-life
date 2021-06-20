@@ -15,22 +15,26 @@ body {
 }
 
 div.movie-container {
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: white;
+    box-shadow: 3px 2px #dedce1;
+}
+
+.poster-container {
+    box-shadow: 4px 2px #dedce1;
 }
 
 .plot-background {
-    background-color: grey;
     height:25vh;
     overflow-y: scroll;
 }
 
 .genre-background {
-    background-color: grey;
 }
 
 .edit-button, .delete-button {
-    background-color: red;
-    border-color: black;
+    background-color:#6693e1;
+    border-color: white;
+    color: white;
 }
 

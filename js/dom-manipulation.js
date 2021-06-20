@@ -12,15 +12,16 @@ function addMovieListToHTML(movieData) {
             //THESE ARE THE INDIVIDUAL MOVIE CARDS
             //EVERYTHING INSIDE OF THE TICKS `` IS BEING APPENDED
 
-            `<div class="row movie-container border justify-content-center justify-content-lg-between p-2">
+            `<div class="row movie-container border rounded justify-content-center justify-content-lg-between p-2 mb-2">
                     <div class="col-md-12 col-lg-4 text-center p-0">
-                        <img src="${poster}" alt="img-id-${id}" class="border" style="max-height:400px">
+                        <img src="${poster}" alt="img-id-${id}" class="border rounded poster-container" style="max-height:400px">
                     </div>
-                    <div class="col-md-12 col-lg-8" data-id="${id}" style="min-width: 450px">
-                        <div class="row pr-1" data-id="${id}">
-                            <h5 id="title-id-${id}" class="col-6 text-center">${title}</h5>
+                    <div class="col-md-12 col-lg-8 " data-id="${id}" style="min-width: 450px">
+                        <div class="row pr-1 align-items-center" data-id="${id}">
+                            <h2 id="title-id-${id}" class="col-6 text-center">${title}</h2>
                             <div id="rating-id-${id}" class="col-6 text-center"><strong>Rating: </strong>${rating}</div>
-                            <p id="plot-id-${id}" class="p-1 col-12 plot-background"><strong>Plot:</strong> <br> ${plot}</p>
+                            <h5 class="col-12 pl-0">Plot:</h5>
+                            <p id="plot-id-${id}" class="p-1 col-12 plot-background">${plot}</p>
                             <p id="genre-id-${id}" class="col-12 p-1  genre-background"><strong>Genre:</strong><br> ${genre}</p>
                             <div id="edit-section-id-${id}" class="toggle-feature"></div>
                             <button class="col-6 align-self-end edit-button btn btn-light" data-id="${id}">Edit</button>

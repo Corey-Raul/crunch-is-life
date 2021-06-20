@@ -46,7 +46,7 @@ function addNewMovieInfo(e) {
 			body: JSON.stringify({
 				title: movieTitleInput,
 				rating: ratingsSelection,
-				poster: '-',
+				poster: 'https://via.placeholder.com/300x400',
 				year: '-',
 				genre: '-',
 				director: '-',

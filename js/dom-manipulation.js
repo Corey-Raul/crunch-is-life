@@ -72,7 +72,7 @@ function createEditingSection(parentID) {
     editSection.html('').toggleClass('toggle-feature')
     let currentMovie = realMovieData[parentID - 1]
     editSection.append(`
-            <form class="row">
+            <form class="row m-1">
             	<div class="col-6">
             		<div class="row m-1">
 						<!--   *** INPUT FOR TITLE ***   -->

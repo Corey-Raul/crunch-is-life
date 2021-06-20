@@ -8,12 +8,10 @@ body {
     background: -webkit-linear-gradient(left, #1B3FA4 0%, #2388CB 50%, #4E1775 100%);
     background: linear-gradient(to right, #1B3FA4 0%, #2388CB 50%, #4E1775 100%);
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.5em;
-    color:white;
+    color:black;
 }
 
 .jumbotron {
-    background-color: #grey;
 }
 
 div.movie-container {
@@ -23,6 +21,8 @@ div.movie-container {
 
 .plot-background {
     background-color: grey;
+    height:25vh;
+    overflow-y: scroll;
 }
 
 .genre-background {

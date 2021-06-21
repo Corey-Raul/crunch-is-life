@@ -13,7 +13,7 @@ function addMovieListToHTML(movieData) {
             //EVERYTHING INSIDE OF THE TICKS `` IS BEING APPENDED
 
             `<div class="row movie-container border rounded justify-content-center justify-content-lg-between p-2 mb-2">
-                    <div class="col-md-12 col-lg-4 text-center p-0">
+                    <div class="col-md-12 col-lg-4 text-center p-0 mb-2">
                         <img src="${poster}" alt="img-id-${id}" class="border rounded poster-container" style="max-height:400px">
                     </div>
                     <div class="col-md-12 col-lg-8 " data-id="${id}" style="min-width: 450px">

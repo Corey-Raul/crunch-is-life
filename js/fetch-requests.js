@@ -57,6 +57,7 @@ function addNewMovieInfo(e) {
 			.then(response => response.json())
 			.then(data => {
 				console.log(data)
+				alert("Movie Added To List")
 				fetchMovieData();
 			})
 	}

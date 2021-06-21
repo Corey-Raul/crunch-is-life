@@ -14,6 +14,11 @@ body {
 .jumbotron {
     -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000;
+    background-color: orange;
+}
+
+#add-movie-title, #add-movie-rating{
+background-color: papayawhip;
 }
 #demo {
     background-color: #1C6EA4;
@@ -28,13 +33,12 @@ body {
 
 div.movie-container {
     background-color: transparent;
-    color: black;
+    color: wheat;
     box-shadow: 3px 2px #0000;
 
 }
 
 .poster-container {
-    box-shadow: 4px 2px #000;
     -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000;
 }
@@ -62,4 +66,5 @@ div.movie-container {
     border-color: rebeccapurple;
     color: black;
 }
+
 

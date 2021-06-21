@@ -12,17 +12,22 @@ function addMovieListToHTML(movieData) {
             //THESE ARE THE INDIVIDUAL MOVIE CARDS
             //EVERYTHING INSIDE OF THE TICKS `` IS BEING APPENDED
 
-            `<div class="col-12 col-sm-5 m-1 card">
-                <img src="${poster}" alt="img-id-${id}" class="card-img-top mx-auto">
-                <div class="card-body">
-                    <div id="title-id-${id}" class="col-8 p-1 card-title">${title}</div>
-                    <div id="rating-id-${id}" class="col-4 p-1 card-text"><strong>Rating: </strong>${rating}</div>
-                    <div id="plot-id-${id}" class="col-12 p-1 card-text plot-background"><strong>Plot:</strong><br> ${plot}</div>
-                    <div id="genre-id-${id}" class="col-12 p-1 card-text genre-background"><strong>Genre:</strong><br> ${genre}</div>
-                    <div id="edit-section-id-${id}" class="col-12 toggle-feature"></div>
-                    <button class="col-5 edit-button btn btn-light m-1 mx-auto" data-id="${id}">Edit</button>
-                    <button  class="col-5 delete-button btn btn-light m-1 mx-auto" data-id="${id}" >Delete</button>
-                </div>
+            `<div class="row movie-container border rounded justify-content-center justify-content-lg-between p-2 mb-2">
+                    <div class="col-md-12 col-lg-4 text-center p-0">
+                        <img src="${poster}" alt="img-id-${id}" class="border rounded poster-container" style="max-height:400px">
+                    </div>
+                    <div class="col-md-12 col-lg-8 " data-id="${id}" style="min-width: 450px">
+                        <div class="row pr-1 align-items-center" data-id="${id}">
+                            <h2 id="title-id-${id}" class="col-6 text-center">${title}</h2>
+                            <div id="rating-id-${id}" class="col-6 text-center"><strong>Rating: </strong>${rating}</div>
+                            <h5 class="col-12 pl-0">Plot:</h5>
+                            <p id="plot-id-${id}" class="p-1 col-12 plot-background">${plot}</p>
+                            <p id="genre-id-${id}" class="col-12 p-1  genre-background"><strong>Genre:</strong><br> ${genre}</p>
+                            <div id="edit-section-id-${id}" class="toggle-feature"></div>
+                            <button class="col-6 align-self-end edit-button btn btn-light" data-id="${id}">Edit</button>
+                            <button  class="col-6 delete-button btn btn-light" data-id="${id}">Delete</button>
+                        </div>
+                    </div>
             </div>`
         )
     })
@@ -55,18 +60,19 @@ function addDeleteBtnEvents() {
 
 function addEditButtonEvents() {
     $('.edit-button').on('click', function () {
+		console.log('Edit Button Click')
         let id = $(this).parent().attr('data-id');
+        console.log(id);
         createEditingSection(id)
     });
 }
 
 function createEditingSection(parentID) {
-    // parentID = $(this).parent().attr('data-id');
     let editSection = $(`#edit-section-id-${parentID}`)
     editSection.html('').toggleClass('toggle-feature')
     let currentMovie = realMovieData[parentID - 1]
     editSection.append(`
-            <form class="row">
+            <form class="row m-1">
             	<div class="col-6">
             		<div class="row m-1">
 						<!--   *** INPUT FOR TITLE ***   -->

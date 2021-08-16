@@ -2,7 +2,7 @@ function documentLoad() {
 	setTimeout(loadPage, 1000)
 }
 
-let glitchURL = "https://spangle-second-act.glitch.me/movies";
+let url = "http://localhost:8080/movies";
 let realMovieData;
 
 //Will load page with multiple functions functions so that all can be done with one setTimeout above
@@ -13,8 +13,13 @@ function loadPage() {
 
 //Will Fetch Movie data and send the data to dom-manipulation.js to display in HTML
 function fetchMovieData() {
-	fetch(glitchURL)
-		.then(response => response.json())
+	fetch(url, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		redirect: 'follow'
+	}).then(response => response.json())
 		.then(data => {
 			realMovieData = data;
 			console.log('Fetching Movie Data')
@@ -26,7 +31,6 @@ function fetchMovieData() {
 		// Get back to this with instructor; error does not log in console
 		.catch(error => {
 			console.log(error);
-			console.error(error)
 		})
 }
 
@@ -38,7 +42,7 @@ function addNewMovieInfo(e) {
 		alert("Please Enter A Title Name")
 		fetchMovieData()
 	} else {
-		fetch(glitchURL, {
+		fetch(url, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -46,12 +50,12 @@ function addNewMovieInfo(e) {
 			body: JSON.stringify({
 				title: movieTitleInput,
 				rating: ratingsSelection,
-				poster: 'https://via.placeholder.com/300x400',
 				year: '-',
+				poster: 'https://via.placeholder.com/300x400',
 				genre: '-',
 				director: '-',
 				plot: '-',
-				actors: '-',
+				actors: '-'
 			})
 		})
 			.then(response => response.json())
@@ -64,7 +68,7 @@ function addNewMovieInfo(e) {
 }
 
 function submitForEditEvent(movieID) {
-		fetch(`${glitchURL}/${movieID}`, {
+		fetch(`${url}/${movieID}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json'
@@ -91,8 +95,15 @@ function submitForEditEvent(movieID) {
 documentLoad();
 
 function deleteMovie(movieID) {
-	fetch(`${glitchURL}/${movieID}`, {
+	fetch(`${url}`, {
 		method: "DELETE",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		redirect: "follow",
+		body: JSON.stringify(
+			movieID
+		)
 	})
 		.then(response => response.json())
 		.then(data => {
